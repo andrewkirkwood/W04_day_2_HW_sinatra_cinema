@@ -1,14 +1,28 @@
 body {
-  background-color: grey;
+  background-color: #241C1F;
+
 }
+body a:visited { text-decoration: none; color:#000; }
+
 
 a {
-text-decoration: none;}
+text-decoration: none;
+}
+
+
 
 h1 {
   padding: 5px;
   padding-left: 15px;
   font-family: helvetica;
+  color: white;
+  opacity: 50%;
+}
+
+h2 {
+  padding: 5px;
+  padding-left: 15px;
+  font-family: sans-serif;
   color: white;
   opacity: 50%;
 }

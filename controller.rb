@@ -14,7 +14,7 @@ get '/films' do
 end
 
 get '/films/:id' do
-  @id = params[:id].to_i
-  @films = Film.all
+  id = params[:id].to_i
+  @film = Film.find_by_id(id)
   erb(:beetlejuice)
 end
