@@ -1,0 +1,5 @@
+<h1>the result is</h1>
+
+  <% for singular in @films %>
+    <ul><li><a href='/films/<%=singular.id%>'><%=singular.title %></a></li></ul>
+  <% end %>

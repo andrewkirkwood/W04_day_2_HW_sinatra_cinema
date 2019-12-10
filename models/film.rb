@@ -48,6 +48,13 @@ class Film
     return Film.map_items(film_data)
   end
 
+  def self.find_by_id(id)
+    sql = "SELECT * FROM films WHERE id = $1"
+    values = [id]
+    data = SqlRunner.run(sql, values)
+    return Film.new(data.first)
+  end
+
   def self.delete_all()
     sql = "DELETE FROM films"
     SqlRunner.run(sql)

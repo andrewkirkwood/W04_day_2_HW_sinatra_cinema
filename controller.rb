@@ -8,7 +8,13 @@ require_relative './models/film'
 
 also_reload './models/*'
 
-get '/' do
+get '/films' do
+  @films = Film.all
   erb(:index)
-  
+end
+
+get '/films/:id' do
+  @id = params[:id].to_i
+  @films = Film.all
+  erb(:beetlejuice)
 end

@@ -1,0 +1,5 @@
+
+<% for film in @films %>
+  <h1><%= film.title if film.title == Film.find_by_id(@id).title%></h1>
+  <h1><%= p "£#{film.price}" if film.title == Film.find_by_id(@id).title%></h1>
+<% end %>
